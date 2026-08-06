@@ -131,9 +131,6 @@ z-index:999;">
 <script>
 fetch("signals.json")
   .then(response => response.json())
-  .<script>
-fetch("signals.json")
-  .then(response => response.json())
   .then(data => {
     let output = "";
 
@@ -148,8 +145,7 @@ fetch("signals.json")
 
     document.getElementById("signals").innerHTML = output;
   })
-  .catch(error => console.log(error));
-</script>
+  
   .catch(error => console.log(error));
 </script>
 </body>
