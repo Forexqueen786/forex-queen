@@ -131,10 +131,25 @@ z-index:999;">
 <script>
 fetch("signals.json")
   .then(response => response.json())
+  .<script>
+fetch("signals.json")
+  .then(response => response.json())
   .then(data => {
-    console.log(data);
-    // Agle step me hum is data ko website par dikhayenge.
+    let output = "";
+
+    data.forEach(signal => {
+      output += `
+        <div style="border:1px solid #ccc;padding:15px;margin:10px 0;">
+          <h3>${signal.title}</h3>
+          <p>${signal.text}</p>
+        </div>
+      `;
+    });
+
+    document.getElementById("signals").innerHTML = output;
   })
+  .catch(error => console.log(error));
+</script>
   .catch(error => console.log(error));
 </script>
 </body>
