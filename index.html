@@ -128,6 +128,14 @@ box-shadow:0 4px 10px rgba(0,0,0,.3);
 z-index:999;">
 💬 WhatsApp +92402041992 
 </a>
-
+<script>
+fetch("signals.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    // Agle step me hum is data ko website par dikhayenge.
+  })
+  .catch(error => console.log(error));
+</script>
 </body>
 </html>
